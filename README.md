@@ -1,6 +1,6 @@
 ## TRABALHO DESAFIO FINAL
 
-## 1º PASSO: RESTAURAR OS DADOS ENVIADO PELO PROF. -Importação do dump/backup para um banco de dados Relacional (SQL);
+## 1º PASSO: RESTAURAR OS DADOS ENVIADO PELO PROF. - Importação do dump/backup para um banco de dados Relacional (SQL);
 
 
 # financeiro -  Fontes de Dados:
@@ -17,79 +17,79 @@ group by  num_ano, cod_ne, codigo_orgao having count(*)>1
 
 | NOME VARIÁVEL | DESCRIÇÃO E TIPO DE VARIÁVEL|POSSUI VALORES NULOS|
 |---|---|---|
-| id | Identificador Serial do Registro - (PK)INTERGER|NÃO|
+| id | Identificador Serial do Registro - (PK)INTEGER|NÃO|
 |---|---|
-| num_ano   |Numero do ano do empenho  - chave única -NOT NULL|NÃO|
+| num_ano   |Numero do ano do empenho  - chave única - NOT NULL|NÃO|
 |---|---|
-|cod_ne |Codigo de identificação do numero do empenho - chave única-NOT NULL|NÃO|
+|cod_ne |Codigo de identificação do numero do empenho - chave única - NOT NULL|NÃO|
 |---|---|
 |codigo_orgao | Codigo que identifica o orgao responsável - Character varying(NOT NULL)|NÃO|
 |---|---|
-|dsc_orgao | Nome do orgão responsável pela despesa- Character varying |NÃO|
+|dsc_orgao | Nome do orgão responsável pela despesa - Character varying |NÃO|
 |---|---|
-|cod_credor| código que identifica o credor -Character varying|NÃO|
+|cod_credor| código que identifica o credor - Character varying|NÃO|
 |---|--|
-| dsc_nome_credor | Nome do credor que tem direito ao recebimento -Character varying|NÃO|
+| dsc_nome_credor | Nome do credor que tem direito ao recebimento - Character varying|NÃO|
 |---|---|
-| cod_fonte| código da fonte dos recursos-Character varying|SIM|
+| cod_fonte| código da fonte dos recursos - Character varying|SIM|
 |---|---|
-|dsc_fonte| descriçaõ de fonte dos recursos utilizados para realizar os pagamentos-Character varying|SIM|
+|dsc_fonte| descrição de fonte dos recursos utilizados para realizar os pagamentos - Character varying|SIM|
 |---|---|
-| cod_funcao |código que identifica a função a qual está relacionada a despesa-Character varying|NÃO|
+| cod_funcao |código que identifica a função a qual está relacionada a despesa - Character varying|NÃO|
 |---|---|
-|dsc_funcao| Função a qual a despesaestá relacionada -Character varying|NÃO
+|dsc_funcao| Função a qual a despesa está relacionada - Character varying|NÃO
 |---|---|
-|cod_item| código do item especifico relacionado a despesa -Character varying|SIM|
+|cod_item| código do item especifico relacionado a despesa - Character varying|SIM|
 |---|---|
-|dsc_item |descrição do item relacionado a despesa -Character varying|SIM|
+|dsc_item |descrição do item relacionado a despesa - Character varying|SIM|
 |---|---|
-|cod_item_elemento| código ítem que identifica o elemento de despesa -Character varying|SIM|
+|cod_item_elemento| código ítem que identifica o elemento de despesa - Character varying|SIM|
 |---|---|
-|dsc_item_elemento| descrição do item elemento que indentifica a natureza do gasto -Character varying|SIM|
+|dsc_item_elemento| descrição do item elemento que identifica a natureza do gasto - Character varying|SIM|
 |---|---|
-|cod_item_categoria | código  ítem categoria -Character varying|NÃO|
+|cod_item_categoria | código item categoria - Character varying|NÃO|
 |---|---|
-|dsc_item_categoria |descrição do item categoria-Character varying|NÃO|
+|dsc_item_categoria |descrição do item categoria - Character varying|NÃO|
 |---|---|
-|cod_item_grupo | código do ittem grupo-Character varying|SIM|
+|cod_item_grupo | código do item grupo - Character varying|SIM|
 |---|---|
-|dsc_item_grupo | descrição item grupo -Character varying|SIM|
+|dsc_item_grupo | descrição item grupo - Character varying|SIM|
 |---|---|
-|dsc_modalidade_licitacao | descrição modalidade licitação -Character varying|
+|dsc_modalidade_licitacao | descrição modalidade licitação - Character varying|
 |---|---|
-|cod_item_modalidade |codigo item modalidade -Character varying|NÃO|
+|cod_item_modalidade |codigo item modalidade - Character varying|NÃO|
 |---|---|
-|dsc_item_modalidade | descrição item modalidade -Character varying|NÃO|
+|dsc_item_modalidade | descrição item modalidade - Character varying|NÃO|
 |---|---|
-|cod_programa | código que identifica um programa específico relacionado a despesa- Character varying|NÃO|
+|cod_programa | código que identifica um programa específico relacionado a despesa - Character varying|NÃO|
 |---|---|
-|dsc_programa | descrição programa relacionado a despesa-Character varying|NÃO|
+|dsc_programa | descrição programa relacionado a despesa - Character varying|NÃO|
 |---|---|
-|cod_subfuncao | codigo subfunção -|Character varying|NÃO|
+|cod_subfuncao | codigo subfunção - |Character varying|NÃO|
 |---|---|
-|dsc_subfuncao | descrição da subfunção em qual a despesa está relacionada -Character varying|NÃO|
+|dsc_subfuncao | descrição da subfunção em qual a despesa está relacionada - Character varying|NÃO|
 |---|---|
-|num_sic | numero do SIC -Numero de identificação do Sistema integrado de adm. financeira, utilizado para controle e registro das informações|SIM|
+|num_sic | numero do SIC - Numero de identificação do Sistema integrado de adm. financeira, utilizado para controle e registro das informações|SIM|
 |---|---|
-|cod_np | codigodo numero do processo -Character varying|NÃO|
+|cod_np | codigodo numero do processo - Character varying|NÃO|
 |---|---|
-|vlr_empenho | valor reservado para pagamento da despesa -NUMERIC(18,2)|NÃO|
+|vlr_empenho | valor reservado para pagamento da despesa - NUMERIC(18,2)|NÃO|
 |---|---|
-|vlr_liquidado | valor utilizado para pagamento da despesa -NUMERIC(18,2)|NÃO|
+|vlr_liquidado | valor utilizado para pagamento da despesa - NUMERIC(18,2)|NÃO|
 |---|---|
-|valor_pago | valor desembolsado para pagar a despesa-NUMERIC(18,2)SIM|
+|valor_pago | valor desembolsado para pagar a despesa - NUMERIC(18,2)SIM|
 |---|---|
-|vlr_resto_pagar | valor que ainda precisa ser pago para pagar a despesa -NUMERIC(18,2)|NÃO|
+|vlr_resto_pagar | valor que ainda precisa ser pago para pagar a despesa - NUMERIC(18,2)|NÃO|
 |---|---|
 |dth_empenho | Data e hora do empenho, indicando quando foi realizado  -DATE|
 |---|---|
-|dth_pagamento |  Data e hora do pagamento indicando quandoocorreu o desembolso -DATE|SIM|
+|dth_pagamento |  Data e hora do pagamento indicando quando ocorreu o desembolso - DATE|SIM|
 |---|---|
 |dth_liquidacao | Data e hora da liquidação, indicando quando ocorreu  -DATE|SIM|
 |---|---|
 |dth_processamento | Data e hora do processamento, indicando quando foi atualizados -DATE|NÃO|
 |---|---|
-|num_ano_np | Numero do ano associado aonúmero do Processo - Character varying|SIM|
+|num_ano_np | Numero do ano associado ao número do Processo - Character varying|SIM|
 
 
 
